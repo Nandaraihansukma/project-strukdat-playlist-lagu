@@ -3,6 +3,7 @@
 struct lagu{
 char judul[25];
 char penyanyi[25];
+int rank[5];
 lagu *next;
 lagu *prev;
 lagu *left;
@@ -16,10 +17,26 @@ struct Queue {
  pointer Head;
  pointer Tail;
 };
+
+Queue createQueue(){
+  Queue baris;
+  baris.Head=nullptr;
+  baris.Tail=nullptr;
+  return baris;
+}
+
+Tree createTree(){
+    return nullptr;
+}
+
+void createNode(){
+    
+}
+
 int main(){
     int menu;
     std::cout<<"-----------------------"<<"\n";
-    std::cout<<"----------------------"<<"\n";
+    std::cout<<"-----------------------"<<"\n";
     std::cout<<"Program Playlist Musik"<<"\n";
     std::cout<<"Menu"<<"\n";
     std::cout<<"1. Insert Lagu"<<"\n";
