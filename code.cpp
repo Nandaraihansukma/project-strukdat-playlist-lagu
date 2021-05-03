@@ -57,10 +57,18 @@ int main(){
         case(6):
     
         case(7):
-        std::cout<<"Terimakasih Telah Menggunakan Playlist";
+        std::cout<<"-----------------------"<<"\n";
+        std::cout<<"-----------------------"<<"\n";
+        std::cout<<"Terimakasih Telah Menggunakan Playlist"<<"\n";
+        std::cout<<"-----------------------"<<"\n";
+        std::cout<<"-----------------------"<<"\n";
             exit(0);
         default:
-        std::cout<<"Perintah Tidak Sesuai"<<"\n"<<"Program Dikeluarkan";
+        std::cout<<"-----------------------"<<"\n";
+        std::cout<<"-----------------------"<<"\n";
+        std::cout<<"Perintah Tidak Sesuai"<<"\n"<<"Program Dikeluarkan"<<"\n";
+        std::cout<<"-----------------------"<<"\n";
+        std::cout<<"-----------------------"<<"\n";
             exit(0);
         
     }
