@@ -1,9 +1,9 @@
 #include <iostream>
 
 struct lagu{
-char judul[25];
-char penyanyi[25];
-int rank[5];
+char judul;
+char penyanyi;
+int rank;
 lagu *next;
 lagu *prev;
 lagu *left;
@@ -29,12 +29,39 @@ Tree createTree(){
     return nullptr;
 }
 
-void createNode(){
-
+void createNode(pointer& newNode){
+newNode =new lagu;
+std::cout<<"Masukkan judul lagu :";
+std::cin>>newNode->judul;
+std::cout<<"Masukkan penyanyi lagu :";
+std::cin>>newNode->penyanyi;
+std::cout<<"Masukkan Ranking lagu :";
+std::cin >>newNode->rank;
+newNode->next=nullptr;
+newNode->prev=nullptr;
+newNode->left=nullptr;
+newNode->right=nullptr;
 }
+void enqueue(Queue &q,pointer newNode){
+}
+void insertTree(Tree& root, pointer newNode){
+if(root == nullptr){
+    root = newNode;
+    }else{
+  bool isLowerThanRoot = (newNode->rank < root->rank);
 
+  if(isLowerThanRoot){
+    insertTree(root->left, newNode);}
+  else{
+    insertTree(root->right, newNode);
+}
+}
+}
 int main(){
     int menu,exit=0;
+    pointer newNode;
+    createQueue();
+    createTree();
     do{
     std::cout<<"-----------------------"<<"\n";
     std::cout<<"-----------------------"<<"\n";
@@ -46,11 +73,15 @@ int main(){
     std::cout<<"4. Now Playing"<<"\n";
     std::cout<<"5. Ranking Lagu"<<"\n";
     std::cout<<"6. Info Lagu"<<"\n";
+    std::cout<<"7. Update Lagu"<<"\n";
     std::cout<<"7. Exit"<<"\n";
     std::cout<<"Masukkan Pilihan:";
     std::cin>>menu;
     switch(menu){
         case(1):
+        createNode(newNode);
+        insertTree(Root,newNode);
+        enqueue(Baris,newNode);
         case(2):
         case(3):
         case(4):
