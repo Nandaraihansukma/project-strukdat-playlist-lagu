@@ -30,7 +30,7 @@ Tree createTree(){
 }
 
 void createNode(){
-    
+
 }
 
 int main(){
@@ -42,9 +42,9 @@ int main(){
     std::cout<<"1. Insert Lagu"<<"\n";
     std::cout<<"2. Delete Lagu"<<"\n";
     std::cout<<"3. List Lagu"<<"\n";
-    std::cout<<"4. Insert Lagu"<<"\n";
-    std::cout<<"5. Insert Lagu"<<"\n";
-    std::cout<<"6. Insert Lagu"<<"\n";
+    std::cout<<"4. Now Playing"<<"\n";
+    std::cout<<"5. Ranking Lagu"<<"\n";
+    std::cout<<"6. Info Lagu"<<"\n";
     std::cout<<"7. Exit"<<"\n";
     std::cout<<"Masukkan Pilihan:";
     std::cin>>menu;
