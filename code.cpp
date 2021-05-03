@@ -34,7 +34,8 @@ void createNode(){
 }
 
 int main(){
-    int menu;
+    int menu,exit=0;
+    do{
     std::cout<<"-----------------------"<<"\n";
     std::cout<<"-----------------------"<<"\n";
     std::cout<<"Program Playlist Musik"<<"\n";
@@ -62,14 +63,16 @@ int main(){
         std::cout<<"Terimakasih Telah Menggunakan Playlist"<<"\n";
         std::cout<<"-----------------------"<<"\n";
         std::cout<<"-----------------------"<<"\n";
-            exit(0);
+            exit=1;
+            break;
         default:
         std::cout<<"-----------------------"<<"\n";
         std::cout<<"-----------------------"<<"\n";
         std::cout<<"Perintah Tidak Sesuai"<<"\n"<<"Program Dikeluarkan"<<"\n";
         std::cout<<"-----------------------"<<"\n";
         std::cout<<"-----------------------"<<"\n";
-            exit(0);
-        
+            exit=1;
+            break;
     }
+    }while(exit==0);
 }
