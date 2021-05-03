@@ -1,8 +1,8 @@
 #include <iostream>
 
 struct lagu{
-char judul;
-char penyanyi;
+std::string judul;
+std::string penyanyi;
 int rank;
 lagu *next;
 lagu *prev;
@@ -28,12 +28,26 @@ Queue createQueue(){
 Tree createTree(){
     return nullptr;
 }
+void search(){
 
+}
+void replace(){
+
+}
+void dequeue(){
+
+}
+void playing( Queue &Top){
+std::cout<<Top.Head->judul;
+}
+void infoLagu(){
+
+}
 void createNode(pointer& newNode){
 newNode =new lagu;
-std::cout<<"Masukkan judul lagu :";
+std::cout<<"Masukkan Judul lagu :";
 std::cin>>newNode->judul;
-std::cout<<"Masukkan penyanyi lagu :";
+std::cout<<"Masukkan Penyanyi lagu :";
 std::cin>>newNode->penyanyi;
 std::cout<<"Masukkan Ranking lagu :";
 std::cin >>newNode->rank;
@@ -43,6 +57,7 @@ newNode->left=nullptr;
 newNode->right=nullptr;
 }
 void enqueue(Queue &q,pointer newNode){
+
 }
 void insertTree(Tree& root, pointer newNode){
 if(root == nullptr){
@@ -57,11 +72,12 @@ if(root == nullptr){
 }
 }
 }
+
 int main(){
     int menu,exit=0;
     pointer newNode;
-    createQueue();
-    createTree();
+  auto Baris=createQueue();
+  auto Root=createTree();
     do{
     std::cout<<"-----------------------"<<"\n";
     std::cout<<"-----------------------"<<"\n";
@@ -74,7 +90,7 @@ int main(){
     std::cout<<"5. Ranking Lagu"<<"\n";
     std::cout<<"6. Info Lagu"<<"\n";
     std::cout<<"7. Update Lagu"<<"\n";
-    std::cout<<"7. Exit"<<"\n";
+    std::cout<<"8. Exit"<<"\n";
     std::cout<<"Masukkan Pilihan:";
     std::cin>>menu;
     switch(menu){
@@ -82,12 +98,24 @@ int main(){
         createNode(newNode);
         insertTree(Root,newNode);
         enqueue(Baris,newNode);
+        break;
+
         case(2):
+        break;
+
         case(3):
+        
+        break;
+
         case(4):
+        break;
+
         case(5):
+        break;
+
         case(6):
-    
+        break;
+
         case(7):
         std::cout<<"-----------------------"<<"\n";
         std::cout<<"-----------------------"<<"\n";
@@ -96,6 +124,7 @@ int main(){
         std::cout<<"-----------------------"<<"\n";
             exit=1;
             break;
+
         default:
         std::cout<<"-----------------------"<<"\n";
         std::cout<<"-----------------------"<<"\n";
