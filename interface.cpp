@@ -18,7 +18,7 @@ int main(){
     std::cin>>menu;
     switch(menu){
         case(1):
-        std::cin>>
+        std::cout<<
         break;
 
         case(2):
@@ -26,15 +26,15 @@ int main(){
         break;
 
         case(3):
-        std::cin>>
+        std::cout<<
         break;
 
         case(4):
-        std::cin>>
+        std::cout<<
         break;
 
         case(5):
-        std::cin>>
+        std::cout<<
         break;
 
         case(6):
@@ -42,23 +42,15 @@ int main(){
         break;
 
         case(7):
-        std::cin>>
+        std::cout<<
         break;
         case(8):
-        std::cout<<"-----------------------"<<"\n";
-        std::cout<<"-----------------------"<<"\n";
-        std::cout<<"Terimakasih Telah Menggunakan Playlist"<<"\n";
-        std::cout<<"-----------------------"<<"\n";
-        std::cout<<"-----------------------"<<"\n";
+       std::cout<<
             exit=1;
             break;
 
         default:
-        std::cout<<"-----------------------"<<"\n";
-        std::cout<<"-----------------------"<<"\n";
-        std::cout<<"Perintah Tidak Sesuai"<<"\n"<<"Program Dikeluarkan"<<"\n";
-        std::cout<<"-----------------------"<<"\n";
-        std::cout<<"-----------------------"<<"\n";
+        std::cout<<
             exit=1;
             break;
     }
