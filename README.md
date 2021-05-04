@@ -32,6 +32,7 @@ dibebaskan sesuai kreatifitas kalian
 
 ## Rencana Pengerjaan Projek
 
+Dikarenakan pandemi covid-19 yang menyebabkan pembelajaran saat ini secara online maka dalam perancangan proyek ini kami bekerja secara bersama-sama melalui platform-platform yang dapat dijadikan sebagai alat komunikasi dan berdiskusi. Platform yang kami gunakan yaitu discord, line, dan github.
 <!--
 Dalam kondisi pandemi seperti ini, tidak memungkinkan untuk bertemu bertatap muka. Maka dari itu
 jelaskan bagaimana kalian bekerja sama, berkoordinasi, pembagian kerja.Tools apa yang kalian gunakan
