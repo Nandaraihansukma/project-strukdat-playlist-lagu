@@ -28,10 +28,16 @@ Queue createQueue(){
 Tree createTree(){
     return nullptr;
 }
-void search(){
+void searchTree(){
 
 }
-void replace(){
+void searchStack(){
+
+}
+void replaceStack(){
+
+}
+void replaceTree(){
 
 }
 void dequeue(){
@@ -83,13 +89,13 @@ int main(){
     std::cout<<"-----------------------"<<"\n";
     std::cout<<"Program Playlist Musik"<<"\n";
     std::cout<<"Menu"<<"\n";
-    std::cout<<"1. Insert Lagu"<<"\n";
-    std::cout<<"2. Delete Lagu"<<"\n";
-    std::cout<<"3. List Lagu"<<"\n";
-    std::cout<<"4. Now Playing"<<"\n";
-    std::cout<<"5. Ranking Lagu"<<"\n";
-    std::cout<<"6. Info Lagu"<<"\n";
-    std::cout<<"7. Update Lagu"<<"\n";
+    std::cout<<"1. Insert Lagu"<<"\n";//masukin ke stack,tree
+    std::cout<<"2. Delete Lagu"<<"\n";//delete di dua duanya
+    std::cout<<"3. List Lagu"<<"\n";//return tree
+    std::cout<<"4. Now Playing"<<"\n";//return stack
+    std::cout<<"5. Ranking Lagu"<<"\n";//return tree bfs
+    std::cout<<"6. Info Lagu"<<"\n";//search bebas terus return
+    std::cout<<"7. Update Lagu"<<"\n";//search stack,tree terus replace
     std::cout<<"8. Exit"<<"\n";
     std::cout<<"Masukkan Pilihan:";
     std::cin>>menu;
