@@ -22,7 +22,7 @@ int main(){
         break;
 
         case(2):
-        std::cin>>
+        std::cout>>
         break;
 
         case(3):
