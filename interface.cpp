@@ -21,9 +21,9 @@ int main(){
     switch(menu){
         case(1):
         std::cout<<" ---------------------------- "<<"\n";
-        std::cout<<"| Masukkan Judul Lagu: "; std::cin>>X;
-        std::cout<<"| Masukkan Penyanyi: "; std::cin>>X;
-        std::cout<<"| Masukkan Ranking Lagu: "; std::cin>>X;
+        std::cout<<"| Masukkan Judul Lagu: "; 
+        std::cout<<"| Masukkan Penyanyi: "; 
+        std::cout<<"| Masukkan Ranking Lagu: "; 
         std::cout<<" ============================ "<<"\n";
         std::cout<<"|      Playlist Diupdate!    |"<<"\n";
         std::cout<<" ============================ "<<"\n\n";
@@ -31,7 +31,7 @@ int main(){
 
         case(2):
         std::cout<<" ---------------------------- "<<"\n";
-        std::cout<<"| Lagu yang ingin dihapus: "; std::cin>>X;
+        std::cout<<"| Lagu yang ingin dihapus: "; 
         std::cout<<" ============================ "<<"\n";
         std::cout<<"|    Lagu Berhasil Dihapus!  |"<<"\n";
         std::cout<<" ============================ "<<"\n\n";
@@ -45,8 +45,8 @@ int main(){
         case(4):
         std::cout<<" ============================ "<<"\n";
         std::cout<<"| Now Playing:               |"<<"\n\n";
-        std::cout<<"| "; std::cin>>X;
-        std::cout<<"| By: "; std::cin>>X;
+        std::cout<<"| "; 
+        std::cout<<"| By: "; 
         break;
 
         case(5):
@@ -56,13 +56,14 @@ int main(){
 
         case(6):
         std::cout<<" ---------------------------- "<<"\n";
-        std::cout<<"| "; std::cin>>X;
+        std::cout<<"| "; 
+        
 
         break;
 
         case(7):
         std::cout<<" ---------------------------- "<<"\n";
-        std::cout<<"| Lagu yang ingin diupdate: "; std::cin>>X;
+        std::cout<<"| Lagu yang ingin diupdate: "; 
         std::cout<<" ============================ "<<"\n";
         std::cout<<"|  Lagu Berhasil Ditemukan!  |"<<"\n";
         std::cout<<" ---------------------------- "<<"\n";
