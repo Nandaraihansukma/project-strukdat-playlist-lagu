@@ -16,14 +16,14 @@ int main(){
     std::cout<<"| 7. Update Lagu             |"<<"\n";  //search stack,tree terus replace
     std::cout<<"| 8. Exit                    |"<<"\n";
     std::cout<<" ============================ "<<"\n";
-    std::cout<<"| Masukkan Pilihan: ";
-    std::cin>>menu; std::cout<<"\n";
+    std::cout<<"| Masukkan Pilihan: ";std::cin>>menu;
+    std::cout<<"\n";
     switch(menu){
         case(1):
         std::cout<<" ---------------------------- "<<"\n";
-        std::cout<<"| Masukkan Judul Lagu: "; 
-        std::cout<<"| Masukkan Penyanyi: "; 
-        std::cout<<"| Masukkan Ranking Lagu: "; 
+        std::cout<<"| Masukkan Judul Lagu:      |" <<"\n";
+        std::cout<<"| Masukkan Penyanyi:        |" <<"\n";
+        std::cout<<"| Masukkan Ranking Lagu:    |" <<"\n";
         std::cout<<" ============================ "<<"\n";
         std::cout<<"|      Playlist Diupdate!    |"<<"\n";
         std::cout<<" ============================ "<<"\n\n";
@@ -31,7 +31,7 @@ int main(){
 
         case(2):
         std::cout<<" ---------------------------- "<<"\n";
-        std::cout<<"| Lagu yang ingin dihapus: "; 
+        std::cout<<"| Lagu yang ingin dihapus:   |"<<"\n";
         std::cout<<" ============================ "<<"\n";
         std::cout<<"|    Lagu Berhasil Dihapus!  |"<<"\n";
         std::cout<<" ============================ "<<"\n\n";
@@ -39,31 +39,37 @@ int main(){
 
         case(3):
         std::cout<<" ---------------------------- "<<"\n";
-
+        std::cout<<"| Playlist Anda:            |"<<"\n";
         break;
 
         case(4):
         std::cout<<" ============================ "<<"\n";
-        std::cout<<"| Now Playing:               |"<<"\n\n";
-        std::cout<<"| "; 
-        std::cout<<"| By: "; 
+        std::cout<<"| Now Playing:               |"<<"\n";
+        std::cout<<"|                            |"<<"\n";
+        std::cout<<"| By:                        |"<<"\n";
         break;
 
         case(5):
         std::cout<<" ---------------------------- "<<"\n";
+        std::cout<<"|Ranking Lagu Anda:          |"<<"\n";
+        std::cout<<"|Judul Lagu:                 |"<<"\n";
+        std::cout<<"|Penyanyi:                   |"<<"\n";
 
         break;
 
         case(6):
         std::cout<<" ---------------------------- "<<"\n";
-        std::cout<<"| "; 
+        std::cout<<"| Masukkan Rank Lagu Anda:   |"<<"\n"; 
+        std::cout<<"|Judul Lagu:                 |"<<"\n";
+        std::cout<<"|Penyanyi:                   |"<<"\n";
         
 
         break;
 
         case(7):
+        int pilihan;
         std::cout<<" ---------------------------- "<<"\n";
-        std::cout<<"| Lagu yang ingin diupdate: "; 
+        std::cout<<"| Lagu yang ingin diupdate:  |" <<"\n";
         std::cout<<" ============================ "<<"\n";
         std::cout<<"|  Lagu Berhasil Ditemukan!  |"<<"\n";
         std::cout<<" ---------------------------- "<<"\n";
@@ -72,15 +78,15 @@ int main(){
         std::cout<<"| 3. Update Ranking Lagu     |"<<"\n";
         std::cout<<" ============================ "<<"\n";
         std::cout<<"| Masukkan Pilihan: ";
-        std::cin>>X; std::cout<<"\n";
-        if( ){
+        std::cin>>pilihan; std::cout<<"\n";
+        if(pilihan>3 ){
             std::cout<<" ============================ "<<"\n";
             std::cout<<"|  Terjadi Kesalahan Input!  |"<<"\n";
             std::cout<<" ============================ "<<"\n";
-        } else {
+        } else if(pilihan=1) {
             std::cout<<" ---------------------------- "<<"\n";
-            std::cout<<"| Masukkan Judul Baru: ";
-            std::cin>>X; std::cout<<"\n";
+            std::cout<<"| Masukkan Judul Baru:      |";
+            std::cout<<"\n";
         }
         break;
         case(8):
@@ -91,8 +97,11 @@ int main(){
             break;
 
         default:
-        std::cout<<
-            exit=1;
+            std::cout<<" ===================================== "<<"\n";
+            std::cout<<"|  Terjadi Kesalahan Input!          |"<<"\n";
+            std::cout<<"|  Mohon Masukan Perintah yang benar |"<<"\n";
+            std::cout<<" ====================================="<<"\n";
+            
             break;
     }
     }while(exit==0);
