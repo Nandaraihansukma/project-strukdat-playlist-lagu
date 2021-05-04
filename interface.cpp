@@ -38,7 +38,7 @@ int main(){
         break;
 
         case(6):
-        std::cin>>
+        std::cout<<
         break;
 
         case(7):
