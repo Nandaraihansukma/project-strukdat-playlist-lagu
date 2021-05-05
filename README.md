@@ -28,7 +28,7 @@ Buat rancangan antar muka selengkap mungkin sesuai fungsi aplikasinya. rancangan
 diusahakan serapih dan seindah mungkin. tools yang digunakan dalam pembuatan rancangan gambar
 dibebaskan sesuai kreatifitas kalian
 !-->
-
+![]https://github.com/Nandaraihansukma/project-strukdat-playlist-lagu/blob/main/images/menu.PNG
 
 ## Rencana Pengerjaan Projek
 Dikarenakan pandemi covid-19 yang menyebabkan pembelajaran saat ini dilaksanakan secara online, maka dalam perancangan proyek ini kami bekerja secara bersama-sama melalui platform-platform yang dapat dijadikan sebagai alat komunikasi dan berdiskusi. Platform yang kami gunakan yaitu discord, line, dan github.
