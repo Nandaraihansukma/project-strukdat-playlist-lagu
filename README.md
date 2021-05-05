@@ -12,12 +12,12 @@ Berdasarkan penjelasan tersebut serta semakin banyaknya kalangan masyarakat yang
 
 
 ## Tujuan dan Manfaat
-Tujuan adanya program “Playlist Music” ini adalah agar dapat mendengarkan musik menajdi semakin menyenangkan
+Tujuan adanya program “Playlist Music” ini adalah agar dapat mendengarkan musik menjadi semakin mudah dan menyenangkan
 
 Beberapa manfaat dari program “Playlist Music” adalah:
-Mudah Digunakan
-Melakukan insert,delete,menampilkan,update judul lagu,penyanyi beserta ranking
-User friendly
+1. Mudah Digunakan
+2. Melakukan insert, delete, menampilkan lagu yang sedang diputar,serta update judul lagu, penyanyi, dan ranking lagu tersebut
+3. User friendly
 
 ## Penjelasan Aplikasi
 Judul yang kami ambil yaitu playlist lagu  adalah sebuah program yang bisa menambahkan lagu ke dalam playlist,delete,update,list lagu,ranking lagu,info lagu yang ada di playlist.Selain itu dalam program ini diimplementasikan menu yang bisa dipakai pengguna untuk memilih dari 8 fungsi yang playlist.
