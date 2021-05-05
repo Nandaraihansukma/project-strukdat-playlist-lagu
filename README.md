@@ -20,7 +20,7 @@ Beberapa manfaat dari program “Playlist Music” adalah:
 3. User friendly
 
 ## Penjelasan Aplikasi
-Judul yang kami ambil yaitu playlist lagu  adalah sebuah program yang bisa menambahkan lagu ke dalam playlist,delete,update,list lagu,ranking lagu,info lagu yang ada di playlist.Selain itu dalam program ini diimplementasikan menu yang bisa dipakai pengguna untuk memilih dari 8 fungsi yang playlist.
+Judul yang kami ambil yaitu “Playlist Lagu” yang merupakan sebuah program yang bisa menambahkan lagu ke dalam playlist, menghapus lagu, meng-update lagu, menampilkan list lagu, me-ranking lagu, serta memberikan info lagu yang ada di playlist. Selain itu, dalam program ini juga diimplementasikan menu yang bisa dipakai pengguna untuk memilih 8 fungsi berbeda dari playlist.
 
 ## Gambar Rancangan Antar Muka
 <!--
@@ -31,8 +31,8 @@ dibebaskan sesuai kreatifitas kalian
 
 
 ## Rencana Pengerjaan Projek
+Dikarenakan pandemi covid-19 yang menyebabkan pembelajaran saat ini dilaksanakan secara online, maka dalam perancangan proyek ini kami bekerja secara bersama-sama melalui platform-platform yang dapat dijadikan sebagai alat komunikasi dan berdiskusi. Platform yang kami gunakan yaitu discord, line, dan github.
 
-Dikarenakan pandemi covid-19 yang menyebabkan pembelajaran saat ini secara online maka dalam perancangan proyek ini kami bekerja secara bersama-sama melalui platform-platform yang dapat dijadikan sebagai alat komunikasi dan berdiskusi. Platform yang kami gunakan yaitu discord, line, dan github.
 <!--
 Dalam kondisi pandemi seperti ini, tidak memungkinkan untuk bertemu bertatap muka. Maka dari itu
 jelaskan bagaimana kalian bekerja sama, berkoordinasi, pembagian kerja.Tools apa yang kalian gunakan
