@@ -20,7 +20,8 @@ Beberapa manfaat dari program “Playlist Music” adalah:
 3. User friendly
 
 ## Penjelasan Aplikasi
-Judul yang kami ambil yaitu “Playlist Lagu” yang merupakan sebuah program yang bisa menambahkan lagu ke dalam playlist, menghapus lagu, meng-update lagu, menampilkan list lagu, me-ranking lagu, serta memberikan info lagu yang ada di playlist. Selain itu, dalam program ini juga diimplementasikan menu yang bisa dipakai pengguna untuk memilih 8 fungsi berbeda dari playlist.
+Judul yang kami ambil yaitu “Playlist Lagu” yang merupakan sebuah program yang bisa
+menambahkan lagu ke dalam playlist, menghapus lagu, meng-update lagu, menampilkan list lagu, me-ranking lagu, serta memberikan info lagu yang ada di playlist. Selain itu, dalam program ini juga diimplementasikan menu yang bisa dipakai pengguna untuk memilih 8 fungsi berbeda dari playlist.
 
 ## Gambar Rancangan Antar Muka
 <!--
@@ -28,7 +29,45 @@ Buat rancangan antar muka selengkap mungkin sesuai fungsi aplikasinya. rancangan
 diusahakan serapih dan seindah mungkin. tools yang digunakan dalam pembuatan rancangan gambar
 dibebaskan sesuai kreatifitas kalian
 !-->
+Menu Utama:
 
+![](https://github.com/Nandaraihansukma/project-strukdat-playlist-lagu/blob/main/images/menu.PNG)
+
+Pilihan 1
+
+![](https://github.com/Nandaraihansukma/project-strukdat-playlist-lagu/blob/main/images/1%20(1).PNG)
+
+Pilihan 2
+
+![](https://github.com/Nandaraihansukma/project-strukdat-playlist-lagu/blob/main/images/2.PNG)
+
+Pilihan 3
+
+![](https://github.com/Nandaraihansukma/project-strukdat-playlist-lagu/blob/main/images/3.PNG)
+
+Pilihan 4
+
+![](https://github.com/Nandaraihansukma/project-strukdat-playlist-lagu/blob/main/images/4.PNG)
+
+Pilihan 5
+
+![](https://github.com/Nandaraihansukma/project-strukdat-playlist-lagu/blob/main/images/5.PNG)
+
+Pilihan 6
+
+![](https://github.com/Nandaraihansukma/project-strukdat-playlist-lagu/blob/main/images/6.PNG)
+
+Pilihan 7
+
+![](https://github.com/Nandaraihansukma/project-strukdat-playlist-lagu/blob/main/images/7.PNG)
+
+Pilihan 8
+
+![](https://github.com/Nandaraihansukma/project-strukdat-playlist-lagu/blob/main/images/8.PNG)
+
+Jika pilihan diluar menu
+
+![](https://github.com/Nandaraihansukma/project-strukdat-playlist-lagu/blob/main/images/9.PNG)
 
 ## Rencana Pengerjaan Projek
 Dikarenakan pandemi covid-19 yang menyebabkan pembelajaran saat ini dilaksanakan secara online, maka dalam perancangan proyek ini kami bekerja secara bersama-sama melalui platform-platform yang dapat dijadikan sebagai alat komunikasi dan berdiskusi. Platform yang kami gunakan yaitu discord, line, dan github.
