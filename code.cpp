@@ -30,25 +30,25 @@ Stack createStack(){
 Top=nullptr;
 return Top;
 }
-void deleteQueue(){
+void deleteQueue(Queue &Q,pointer del1){
         std::cout<<" ---------------------------- "<<"\n";
         std::cout<<"| Lagu yang ingin dihapus:   |"<<"\n";
         std::cout<<" ============================ "<<"\n";
         std::cout<<"|    Lagu Berhasil Dihapus!  |"<<"\n";
         std::cout<<" ============================ "<<"\n\n";
 }
-void deleteStack(){
+void deleteStack(Stack &Top,pointer del2){
 
 }
-void replaceStack(){
+void replaceStack(Stack &Top,pointer search){
     int pilihan;
-        std::cout<<" ---------------------------- "<<"\n";
-        std::cout<<"| Lagu yang ingin diupdate:  |" <<"\n";
-        std::cout<<" ============================ "<<"\n";
-        std::cout<<"|  Lagu Berhasil Ditemukan!  |"<<"\n";
-        std::cout<<" ---------------------------- "<<"\n";
-        std::cout<<"| 1. Update Judul Lagu       |"<<"\n";
-        std::cout<<"| 2. Update Penyanyi         |"<<"\n";
+        std::cout<<" ------------------------------------- "<<"\n";
+        std::cout<<"| Ranking Lagu yang ingin diupdate:  |" <<"\n";
+        std::cout<<" ===================================== "<<"\n";
+        std::cout<<"|  Lagu Berhasil Ditemukan!          |"<<"\n";
+        std::cout<<" --------------------------------------"<<"\n";
+        std::cout<<"| 1. Update Judul Lagu               |"<<"\n";
+        std::cout<<"| 2. Update Penyanyi                 |"<<"\n";
          std::cin>>pilihan; std::cout<<"\n";
         if(pilihan>3 ){
             std::cout<<" ============================ "<<"\n";
@@ -57,7 +57,7 @@ void replaceStack(){
         } else if(pilihan=1) {
 }
 }
-void replaceQueue(){
+void replaceQueue(Stack &Top,pointer search){
 
 }
 void searchQueue(Queue baris,int rank){
@@ -79,9 +79,9 @@ pointer searchStack(Stack Top,int ranking){
 void playing(Stack &Top){
 std::cout<<" ============================ "<<"\n";
         std::cout<<"| Now Playing:               |"<<"\n";
-        std::cout<<"| "<<Top->judul<< " |"<<"\n";
+        std::cout<<"| "<<Top->judul<<"\n";
         std::cout<<"| By:                        |"<<"\n";
-         std::cout<<"|"<<Top->penyanyi<< " |"<<"\n";
+         std::cout<<"|"<<Top->penyanyi<<"\n";
 }
 void infoLagu(pointer search){
         std::cout<<"|Judul Lagu:                 |"<<"\n";
@@ -116,32 +116,34 @@ bool IsEmptyq(Queue q) {
   return false;
   }
 }
-/*void enqueue(Queue &q, pointer newNode) {
+void enqueue(Queue &q, pointer newNode) {
   pointer  prev=nullptr;
   pointer help=q.Head;
   if(IsEmptyq(q)){
     q.Head=newNode;
     q.Tail=newNode;
   }else{
-     while (help->next != NULL &&help->rank >=newNode->rank) {
+     while (help->rank >=newNode->rank) {
+       if(help->next=nullptr)
+       break;
         prev = help;
         help = help->next;
-    }if(help==q.Tail&&help->rank>newNode->rank){
-      help->next=newNode;
-      q.Tail=newNode;
-    }else if(help==q.Head&&help->rank<newNode->rank){
+    } if(help==q.Head&&newNode->rank<help->rank){
       newNode->next=help;
       q.Head=newNode;
+      }else if(help==q.Tail&&newNode->rank>help->rank){
+      help->next=newNode;
+      q.Tail=newNode;
     }else if(help->rank==newNode->rank){
       newNode->next=help->next;
       help->next=newNode;
     }
       else {
+             prev->next = newNode;
             newNode->next = help;
-            prev->next = newNode;
         }
     }
-}*/
+}
 
 
 bool isEmptys(Stack Top) {
@@ -164,7 +166,7 @@ void tranversalS(Stack Top) {
     int count=1;
     std::cout<<" ---------------------------- "<<"\n";
     std::cout<<"| Playlist Anda:            |"<<"\n";
-  pointer pHelp = Top;
+    pointer pHelp = Top;
   if(isEmptys(Top)){
    std::cout<<"| Playlist Kosong           |"<<"\n";
  }else{
@@ -178,12 +180,28 @@ void tranversalS(Stack Top) {
           }
    }std::cout<<" ============================ "<<"\n";
  }
-
+void tranversalQ(Queue q) {
+  pointer pHelp = q.Head;
+  if(IsEmptyq(q)){
+   std::cout<<"| Playlist Kosong           |"<<"\n";
+ }else{
+   while (pHelp!= nullptr) {
+     std::cout<<" ---------------------------- "<<"\n";
+     std::cout<<"|Ranking Lagu Anda:          |"<<"\n";
+     std::cout<<"|"<<pHelp->rank<<"\n";
+     std::cout<<"|Judul Lagu:                 |"<<"\n";
+     std::cout<<"|"<<pHelp->judul<<"\n";
+      std::cout<<"|Penyanyi:                   |"<<"\n";
+      std::cout<<"|"<<pHelp->penyanyi<<"\n";
+       pHelp = pHelp->next;
+          }
+   }std::cout<<" ============================ "<<"\n";
+ }
 
 int main(){
     int menu,exit=0,ranking;
     pointer newNode,search;
-   // auto Baris=createQueue();
+    auto Baris=createQueue();
    auto Top=createStack();
     do{
     std::cout<<" ============================ "<<"\n";
@@ -205,14 +223,14 @@ int main(){
         case(1):
         createNode(newNode);
         push(Top,newNode);
-       // enqueue(Baris,newNode); priority dibenarkan
+      // enqueue(Baris,newNode); priority dibenarkan
         break;
 
         case(2):
-        searchQueue();
+        /*searchQueue();
         searchStack();
         deleteQueue();
-        deleteStack();
+        deleteStack();*/
         break;
 
         case(3):
@@ -224,7 +242,7 @@ int main(){
         break;
 
         case(5):
-        //tranversal queue
+       // tranversalQ(Baris);//betulin enqueue
         break;
 
         case(6):
@@ -233,10 +251,10 @@ int main(){
         break;
 
         case(7):
-        searchStack();
+       /* searchStack();
         searchQueue();
         replaceStack();
-        replaceQueue;
+        replaceQueue;*/
         break;
         case(8):
        std::cout<<" ============================ "<<"\n";
