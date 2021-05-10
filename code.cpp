@@ -30,6 +30,15 @@ Stack createStack(){
 Top=nullptr;
 return Top;
 }
+pointer searchStack(Stack Top,int ranking){
+        pointer help=Top;
+         while(help!=nullptr){ 
+           if(help->rank==ranking){
+            break;
+            help=Top->next;
+        } 
+         }return help;
+}
 void deleteQueue(Queue &Q,pointer del1){
         std::cout<<" ---------------------------- "<<"\n";
         std::cout<<"| Lagu yang ingin dihapus:   |"<<"\n";
@@ -41,20 +50,35 @@ void deleteStack(Stack &Top,pointer del2){
 
 }
 void replaceStack(Stack &Top,pointer search){
-    int pilihan;
+    int pilihan,ranking;
+    
         std::cout<<" ------------------------------------- "<<"\n";
         std::cout<<"| Ranking Lagu yang ingin diupdate:  |" <<"\n";
+        std::cout<<"|";std::cin>>ranking;
         std::cout<<" ===================================== "<<"\n";
+        search=searchStack(Top,ranking);
         std::cout<<"|  Lagu Berhasil Ditemukan!          |"<<"\n";
         std::cout<<" --------------------------------------"<<"\n";
         std::cout<<"| 1. Update Judul Lagu               |"<<"\n";
         std::cout<<"| 2. Update Penyanyi                 |"<<"\n";
+        std::cout<<"| Masukan Pilihan:";
          std::cin>>pilihan; std::cout<<"\n";
-        if(pilihan>3 ){
+        if(pilihan>2&&pilihan<1){
             std::cout<<" ============================ "<<"\n";
             std::cout<<"|  Terjadi Kesalahan Input!  |"<<"\n";
             std::cout<<" ============================ "<<"\n";
         } else if(pilihan=1) {
+          std::cout<<" ---------------------------- "<<"\n";
+          std::cout<<"| Masukkan Judul Baru:      |"<<"\n";
+          std::cout<<"| ";
+          std::cin>>search->judul;
+          std::cout<<"\n";
+          } else if(pilihan=2) {
+          std::cout<<" --------------------------------"<<"\n";
+          std::cout<<"| Masukkan Penyanyi Baru:      |"<<"\n";
+          std::cout<<"| ";
+          std::cin>>search->penyanyi;
+          std::cout<<"\n";
 }
 }
 void replaceQueue(Stack &Top,pointer search){
@@ -64,18 +88,7 @@ void searchQueue(Queue baris,int rank){
 
 
 }
-pointer searchStack(Stack Top,int ranking){
-        pointer help=Top;
-        std::cout<<" ---------------------------- "<<"\n";
-        std::cout<<"|Ranking Lagu Anda:          |"<<"\n";
-        std::cin>>ranking;
-         while(help!=nullptr){
-            help=Top->next;
-            if(help->rank=ranking){
-            break;
-        } 
-         }return help;
-}
+
 void playing(Stack &Top){
 std::cout<<" ============================ "<<"\n";
         std::cout<<"| Now Playing:               |"<<"\n";
@@ -227,9 +240,9 @@ int main(){
         break;
 
         case(2):
-        /*searchQueue();
-        searchStack();
-        deleteQueue();
+        //searchQueue();
+        searchStack(Top,ranking);
+       /* deleteQueue();
         deleteStack();*/
         break;
 
@@ -246,15 +259,17 @@ int main(){
         break;
 
         case(6):
-        search=searchStack(Top,ranking);//broken
-        infoLagu(search);//broken
+        std::cout<<" ---------------------------- "<<"\n";
+        std::cout<<"|Ranking Lagu Anda:          |"<<"\n";
+        std::cout<<"| ";
+        std::cin>>ranking;
+        search=searchStack(Top,ranking);
+        infoLagu(search);
         break;
 
         case(7):
-       /* searchStack();
-        searchQueue();
-        replaceStack();
-        replaceQueue;*/
+        replaceStack(Top,search);
+        //replaceQueue;
         break;
         case(8):
        std::cout<<" ============================ "<<"\n";
