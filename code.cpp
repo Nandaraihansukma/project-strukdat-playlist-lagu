@@ -84,8 +84,14 @@ void replaceStack(Stack &Top,pointer search){
 void replaceQueue(Stack &Top,pointer search){
 
 }
-void searchQueue(Queue baris,int rank){
-
+pointer searchQueue(Queue baris,int ranking){
+ pointer help=Top;
+         while(help!=nullptr){ 
+           if(help->rank==ranking){
+            break;
+            help=Top->next;
+        } 
+         }return help;
 
 }
 
