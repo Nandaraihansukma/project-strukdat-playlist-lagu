@@ -30,6 +30,20 @@ Stack createStack(){
 Top=nullptr;
 return Top;
 }
+bool IsEmptyq(Queue q) {
+  if(q.Head==nullptr && q.Tail==nullptr){
+    return true;
+  }else{
+  return false;
+  }
+}
+bool isEmptys(Stack Top) {
+  if(Top==nullptr){
+  return true;
+  }else{
+    return false;
+  }
+}
 pointer searchStack(Stack Top,int ranking){
         pointer help=Top;
          while(help!=nullptr){ 
@@ -45,8 +59,33 @@ void deleteQueue(Queue &Q,pointer del1){
         std::cout<<" ============================ "<<"\n";
         std::cout<<"|    Lagu Berhasil Dihapus!  |"<<"\n";
         std::cout<<" ============================ "<<"\n\n";
+        pointer delElement;
+ if(IsEmptyq(Q)){
+    delElement=nullptr;
+ }else if(Q.Head->next==nullptr){
+   delElement=Q.Head;
+   Q.Head=nullptr;
+   Q.Tail=nullptr;
+ }else{
+   delElement=Q.Head;
+   Q.Head=Q.Head->next;
+   delElement->next=nullptr;
+ }
 }
 void deleteStack(Stack &Top,pointer del2){
+  pointer help=Top;
+  pointer prev=nullptr;
+  while (help!=nullptr){
+    if(help=del2){
+    break;}
+    prev=help;
+    help=help->next;
+  }
+if (help=Top){
+  Top=Top->next;
+  help=nullptr;
+  delete del2;
+}
 
 }
 void replaceStack(Stack &Top,pointer search){
@@ -128,13 +167,7 @@ std::cout<<" ============================ "<<"\n";
 std::cout<<"|      Playlist Diupdate!    |"<<"\n";
 std::cout<<" ============================ "<<"\n\n";
 }
-bool IsEmptyq(Queue q) {
-  if(q.Head==nullptr && q.Tail==nullptr){
-    return true;
-  }else{
-  return false;
-  }
-}
+
 void enqueue(Queue &q, pointer newNode) {
   pointer  prev=nullptr;
   pointer help=q.Head;
@@ -164,19 +197,12 @@ void enqueue(Queue &q, pointer newNode) {
     }
 }
 
-
-bool isEmptys(Stack Top) {
-  if(Top==nullptr){
-  return true;
-  }else{
-    return false;
-  }
-}
 Stack push(Stack&Top,pointer newNode){
  if(isEmptys(Top)){
     Top=newNode;
   }else{
      newNode->next=Top;
+     Top->prev=newNode;
     Top=newNode;
 } return Top;
 }
@@ -219,7 +245,7 @@ void tranversalQ(Queue q) {
 
 int main(){
     int menu,exit=0,ranking;
-    pointer newNode,search;
+    pointer newNode,search,del;
     auto Baris=createQueue();
    auto Top=createStack();
     do{
@@ -247,9 +273,11 @@ int main(){
 
         case(2):
         //searchQueue();
-        searchStack(Top,ranking);
-       /* deleteQueue();
-        deleteStack();*/
+        std::cin>>ranking;
+       del=searchStack(Top,ranking);
+
+       // deleteQueue();
+        deleteStack(Top,del);
         break;
 
         case(3):
