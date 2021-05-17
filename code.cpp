@@ -112,11 +112,11 @@ void replaceQueue(Stack &Top,pointer search){
 
 }
 pointer searchQueue(Queue baris,int ranking){
- pointer help=Top;
-         while(help!=nullptr){ 
+ pointer help=baris.Head;
+         while(help=nullptr){ 
            if(help->rank==ranking){
             break;
-            help=Top->next;
+            help=baris.Head->next;
         } 
          }return help;
 
