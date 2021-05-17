@@ -107,7 +107,7 @@ void replaceStack(Stack &Top,pointer search,int pilihan){
           std::cout<<"\n";
 }
 }
-void replaceQueue(Stack &Top,pointer search,int pilihan){
+void replaceQueue(Queue &q,pointer search,int pilihan){
 if(pilihan>2&&pilihan<1){
             std::cout<<" ============================ "<<"\n";
             std::cout<<"|  Terjadi Kesalahan Input!  |"<<"\n";
@@ -173,33 +173,22 @@ std::cout<<" ============================ "<<"\n\n";
 }
 
 void enqueue(Queue &q, pointer newNode) {
-  pointer  prev=nullptr;
-  pointer help=q.Head;
-  if(IsEmptyq(q)){
-    q.Head=newNode;
-    q.Tail=newNode;
-  }else{
-     while (help->rank >=newNode->rank) {
-       if(help->next=nullptr)
-       break;
-        prev = help;
-        help = help->next;
-    } if(help==q.Head&&newNode->rank<help->rank){
-      newNode->next=help;
-      q.Head=newNode;
-      }else if(help==q.Tail&&newNode->rank>help->rank){
-      help->next=newNode;
-      q.Tail=newNode;
-    }else if(help->rank==newNode->rank){
-      newNode->next=help->next;
-      help->next=newNode;
-    }
-      else {
-             prev->next = newNode;
-            newNode->next = help;
+ 
+pointer help = q.Head;
+ if (IsEmptyq(q) || newNode->rank < q.Head->rank)
+            {
+                newNode->next = q.Head;
+                q.Head = newNode;
+            }
+            else
+            {
+                while (help->next != NULL && help->next->rank <= newNode->rank)
+                    help=help->next;
+                newNode->next =help->next;
+                help->next = newNode;
+                q.Tail=newNode;
+            }
         }
-    }
-}
 
 Stack push(Stack&Top,pointer newNode){
  if(isEmptys(Top)){
@@ -249,7 +238,7 @@ void tranversalQ(Queue q) {
 
 int main(){
     int menu,exit=0,ranking,pilihan;
-    pointer newNode,search,del,searchS;
+    pointer newNode,search,del,searchS,searchQ;
     auto Baris=createQueue();
    auto Top=createStack();
     do{
@@ -272,7 +261,7 @@ int main(){
         case(1):
         createNode(newNode);
         push(Top,newNode);
-      // enqueue(Baris,newNode); priority dibenarkan
+       enqueue(Baris,newNode); 
         break;
 
         case(2):
@@ -293,7 +282,7 @@ int main(){
         break;
 
         case(5):
-       // tranversalQ(Baris);//betulin enqueue
+        tranversalQ(Baris);//betulin enqueue
         break;
 
         case(6):
@@ -311,7 +300,7 @@ int main(){
         std::cout<<"|";std::cin>>ranking;
         std::cout<<" ===================================== "<<"\n";
        searchS=searchStack(Top,ranking);
-       //pointer searchQ=searchQueue(Head,ranking);
+        searchQ=searchQueue(Baris,ranking);
         std::cout<<"|  Lagu Berhasil Ditemukan!          |"<<"\n";
         std::cout<<" --------------------------------------"<<"\n";
         std::cout<<"| 1. Update Judul Lagu               |"<<"\n";
@@ -319,7 +308,7 @@ int main(){
         std::cout<<"| Masukan Pilihan:";
          std::cin>>pilihan; std::cout<<"\n";
         replaceStack(Top,searchS,pilihan);
-        //replaceQueue;
+       // replaceQueue(Baris,searchQ,pilihan);
         break;
         case(8):
        std::cout<<" ============================ "<<"\n";
