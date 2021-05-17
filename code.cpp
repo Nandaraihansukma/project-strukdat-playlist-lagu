@@ -86,7 +86,6 @@ if (help=Top){
   help=nullptr;
   delete del2;
 }
-
 }
 void replaceStack(Stack &Top,pointer search,int pilihan){
         if(pilihan>2&&pilihan<1){
@@ -108,8 +107,25 @@ void replaceStack(Stack &Top,pointer search,int pilihan){
           std::cout<<"\n";
 }
 }
-void replaceQueue(Stack &Top,pointer search){
-
+void replaceQueue(Stack &Top,pointer search,int pilihan){
+if(pilihan>2&&pilihan<1){
+            std::cout<<" ============================ "<<"\n";
+            std::cout<<"|  Terjadi Kesalahan Input!  |"<<"\n";
+            std::cout<<" ============================ "<<"\n";
+            exit(0);
+        } else if(pilihan==1) {
+          std::cout<<" ---------------------------- "<<"\n";
+          std::cout<<"| Masukkan Judul Baru:      |"<<"\n";
+          std::cout<<"| ";
+          std::cin>>search->judul;
+          std::cout<<"\n";
+          } else if(pilihan==2) {
+          std::cout<<" --------------------------------"<<"\n";
+          std::cout<<"| Masukkan Penyanyi Baru:      |"<<"\n";
+          std::cout<<"| ";
+          std::cin>>search->penyanyi;
+          std::cout<<"\n";
+}
 }
 pointer searchQueue(Queue baris,int ranking){
  pointer help=baris.Head;
