@@ -88,31 +88,19 @@ if (help=Top){
 }
 
 }
-void replaceStack(Stack &Top,pointer search){
-    int pilihan,ranking;
-    
-        std::cout<<" ------------------------------------- "<<"\n";
-        std::cout<<"| Ranking Lagu yang ingin diupdate:  |" <<"\n";
-        std::cout<<"|";std::cin>>ranking;
-        std::cout<<" ===================================== "<<"\n";
-        search=searchStack(Top,ranking);
-        std::cout<<"|  Lagu Berhasil Ditemukan!          |"<<"\n";
-        std::cout<<" --------------------------------------"<<"\n";
-        std::cout<<"| 1. Update Judul Lagu               |"<<"\n";
-        std::cout<<"| 2. Update Penyanyi                 |"<<"\n";
-        std::cout<<"| Masukan Pilihan:";
-         std::cin>>pilihan; std::cout<<"\n";
+void replaceStack(Stack &Top,pointer search,int pilihan){
         if(pilihan>2&&pilihan<1){
             std::cout<<" ============================ "<<"\n";
             std::cout<<"|  Terjadi Kesalahan Input!  |"<<"\n";
             std::cout<<" ============================ "<<"\n";
-        } else if(pilihan=1) {
+            exit(0);
+        } else if(pilihan==1) {
           std::cout<<" ---------------------------- "<<"\n";
           std::cout<<"| Masukkan Judul Baru:      |"<<"\n";
           std::cout<<"| ";
           std::cin>>search->judul;
           std::cout<<"\n";
-          } else if(pilihan=2) {
+          } else if(pilihan==2) {
           std::cout<<" --------------------------------"<<"\n";
           std::cout<<"| Masukkan Penyanyi Baru:      |"<<"\n";
           std::cout<<"| ";
@@ -244,8 +232,8 @@ void tranversalQ(Queue q) {
  }
 
 int main(){
-    int menu,exit=0,ranking;
-    pointer newNode,search,del;
+    int menu,exit=0,ranking,pilihan;
+    pointer newNode,search,del,searchS;
     auto Baris=createQueue();
    auto Top=createStack();
     do{
@@ -302,7 +290,19 @@ int main(){
         break;
 
         case(7):
-        replaceStack(Top,search);
+        std::cout<<" ------------------------------------- "<<"\n";
+        std::cout<<"| Ranking Lagu yang ingin diupdate:  |" <<"\n";
+        std::cout<<"|";std::cin>>ranking;
+        std::cout<<" ===================================== "<<"\n";
+       searchS=searchStack(Top,ranking);
+       //pointer searchQ=searchQueue(Head,ranking);
+        std::cout<<"|  Lagu Berhasil Ditemukan!          |"<<"\n";
+        std::cout<<" --------------------------------------"<<"\n";
+        std::cout<<"| 1. Update Judul Lagu               |"<<"\n";
+        std::cout<<"| 2. Update Penyanyi                 |"<<"\n";
+        std::cout<<"| Masukan Pilihan:";
+         std::cin>>pilihan; std::cout<<"\n";
+        replaceStack(Top,searchS,pilihan);
         //replaceQueue;
         break;
         case(8):
