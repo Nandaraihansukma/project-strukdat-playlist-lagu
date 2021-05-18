@@ -117,11 +117,15 @@ pointer searchQueue(Queue baris,int ranking){
 }
 
 void playing(Stack &Top){
+  if(isEmptys(Top)){
+   std::cout<<"| Playlist Kosong           |"<<"\n";
+  }else{
 std::cout<<" ============================ "<<"\n";
         std::cout<<"| Now Playing:               |"<<"\n";
         std::cout<<"| "<<Top->judul<<"\n";
         std::cout<<"| By:                        |"<<"\n";
          std::cout<<"|"<<Top->penyanyi<<"\n";
+}
 }
 void infoLagu(pointer search){
         std::cout<<"|Judul Lagu:                 |"<<"\n";
@@ -148,6 +152,7 @@ std::cin >>newNode->rank;
 std::cout<<" ============================ "<<"\n";
 std::cout<<"|      Playlist Diupdate!    |"<<"\n";
 std::cout<<" ============================ "<<"\n\n";
+
 }
 
 void enqueue(Queue &q, pointer newNode) {
@@ -168,14 +173,13 @@ pointer help = q.Head;
             }
         }
 
-Stack push(Stack&Top,pointer newNode){
+void push(Stack&Top,pointer newNode){
  if(isEmptys(Top)){
     Top=newNode;
   }else{
      newNode->next=Top;
-     Top->prev=newNode;
     Top=newNode;
-} return Top;
+}
 }
 
 void tranversalS(Stack Top) {
@@ -218,7 +222,7 @@ void tranversalQ(Queue q) {
 
 int main(){
     int menu,exit=0,ranking,pilihan;
-    pointer newNode,search,del,searchS,searchQ;
+    pointer newNode,search,del,searchS,searchQ,satu,dua;
     auto Baris=createQueue();
    auto Top=createStack();
     do{
@@ -239,13 +243,13 @@ int main(){
     std::cout<<"\n";
     switch(menu){
         case(1):
-        createNode(newNode);
-        push(Top,newNode);
-       enqueue(Baris,newNode); 
+       createNode(newNode);    
+         push(Top,newNode);
+     enqueue(Baris,newNode); 
         break;
 
         case(2):
-        //deleteQueue(Baris,del);
+        deleteQueue(Baris,del);
         deleteStack(Top,del);
         break;
 
