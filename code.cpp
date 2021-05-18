@@ -133,7 +133,6 @@ void infoLagu(pointer search){
 void createNode(pointer& newNode){
 newNode =new lagu;
 newNode->next=nullptr;
-newNode->prev=nullptr;
 newNode->left=nullptr;
 newNode->right=nullptr;
 std::cout<<" ---------------------------- "<<"\n";
@@ -277,7 +276,7 @@ int main(){
         std::cout<<"|";std::cin>>ranking;
         std::cout<<" ===================================== "<<"\n";
        searchS=searchStack(Top,ranking);
-        searchQ=searchQueue(Baris,ranking);
+       
         std::cout<<"|  Lagu Berhasil Ditemukan!          |"<<"\n";
         std::cout<<" --------------------------------------"<<"\n";
         std::cout<<"| 1. Update Judul Lagu               |"<<"\n";
