@@ -188,7 +188,7 @@ void tranversalS(Stack Top) {
    std::cout<<" ===================================== "<<"\n\n";
  }else{
    while (pHelp!= nullptr) {
-    std::cout<<"|Judul Lagu"<<" "<<count<<":              |"<<"\n";
+    std::cout<<"| Judul Lagu"<<" "<<count<<":                       |"<<"\n";
     std::cout<<"| "<<pHelp->judul<<"\n";
     std::cout<<"| Penyanyi:                           |"<<"\n";
     std::cout<<"| "<<pHelp->penyanyi<<"\n";
