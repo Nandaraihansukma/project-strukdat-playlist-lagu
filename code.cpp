@@ -53,13 +53,7 @@ pointer searchStack(Stack Top,int ranking){
         } 
          }return help;
 }
-void deleteQueue(Queue &Q,pointer del1){
-       /* std::cout<<" ---------------------------- "<<"\n";
-        std::cout<<"| Lagu yang ingin dihapus:   |"<<"\n";
-        std::cout<<" ============================ "<<"\n";
-        std::cout<<"|    Lagu Berhasil Dihapus!  |"<<"\n";
-        std::cout<<" ============================ "<<"\n\n";*/
-        pointer delElement;
+void deleteQueue(Queue &Q,pointer delElement){        
  if(IsEmptyq(Q)){
     delElement=nullptr;
  }else if(Q.Head->next==nullptr){
@@ -71,6 +65,9 @@ void deleteQueue(Queue &Q,pointer del1){
    Q.Head=Q.Head->next;
    delElement->next=nullptr;
  }
+ std::cout<<" ============================ "<<"\n";
+ std::cout<<"|    Lagu Berhasil Dihapus!  |"<<"\n";
+ std::cout<<" ============================ "<<"\n\n";
 }
 void deleteStack(Stack &Top,pointer delElement){
  if(isEmptys(Top)){
@@ -250,7 +247,7 @@ int main(){
 
         case(2):
         deleteQueue(Baris,del);
-        deleteStack(Top,del);
+        
         break;
 
         case(3):
