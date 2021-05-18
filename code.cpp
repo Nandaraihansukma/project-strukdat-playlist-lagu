@@ -5,7 +5,6 @@ std::string judul;
 std::string penyanyi;
 int rank;
 lagu *next;
-lagu *prev;
 lagu *left;
 lagu *right;
 };
@@ -218,7 +217,7 @@ void tranversalQ(Queue q) {
 
 int main(){
     int menu,exit=0,ranking,pilihan;
-    pointer newNode,search,del,searchS,searchQ,satu,dua;
+    pointer newNode,search,del,searchS,searchQ;
     auto Baris=createQueue();
    auto Top=createStack();
     do{
